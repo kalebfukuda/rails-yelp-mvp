@@ -1,0 +1,15 @@
+<div class="w-100 bg-black d-flex justify-content-end">
+  <%= link_to "Add", new_restaurant_path, class: "btn btn-success" %>
+</div>
+<div class="container">
+  <h1>Index</h1>
+    <div class="cards">
+      <% @restaurants.each do |restaurant| %>
+        <%= link_to restaurant_path(restaurant), class: "text-decoration-none text-white" do %>
+          <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/breakfast.jpg)">
+            <%= restaurant.name %>
+        </div>
+        <% end %>
+      <% end %>
+  </div>
+</div>
